@@ -22,7 +22,7 @@
 	<title>
     <?php
     if(!is_home() || !is_front_page()) wp_title('-', true, 'right');
-    echo get_bloginfo('name');
+    // echo get_bloginfo('name');
     ?>
   </title>
 
@@ -74,7 +74,7 @@
 
     <?php dynamic_sidebar('header_tagline'); ?>
 
-		<?wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'header-menu' ) ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'header-menu' ) ); ?>
 
 		<a id="search-button" title="Search" data-target="#search-popup"><i class="fa fa-search" aria-hidden="true"></i></a>
 		<div id="search-popup"><?php get_search_form(); ?></div>
@@ -84,7 +84,7 @@
 </div>
 
 <div id="main-menu">
-	<?wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'site-width' ) ); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'site-width' ) ); ?>
 </div>
 
 <a id="menu-button" data-target="#mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>

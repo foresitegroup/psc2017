@@ -229,20 +229,26 @@ P { margin: 0 0 15px; }
   top: 50%;
   right: 180px;
   transform: translateY(-50%);
-}
-
-.header-menu A:link,
-.header-menu A:visited {
-  color: #444444;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1em;
 }
 
+.header-menu A:link,
+.header-menu A:visited {
+  color: #444444;
+  text-decoration: underline;
+}
+
 .header-menu A:hover,
 .header-menu A:active {
   color: #2D5C88;
+}
+
+.header-menu LI:last-of-type A {
+  padding-left: 0.5em;
+  color: #444444;
 }
 
 .form-search { position: relative; }
