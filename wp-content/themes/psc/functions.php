@@ -129,4 +129,7 @@ function fg_search_filter($query) {
   return $query;
 }
 add_filter('pre_get_posts','fg_search_filter');
+
+
+add_filter('user_can_richedit' , create_function('' , 'return false;') , 50);
 ?>
