@@ -31,6 +31,9 @@
   
   <?php wp_enqueue_script("jquery"); ?>
   <?php wp_head(); ?>
+
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/inc/swipebox/swipebox.css">
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/swipebox/jquery.swipebox.min.js"></script>
   
   <link href="//fonts.googleapis.com/css?family=Open+Sans:700i|Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -52,6 +55,8 @@
       });
 
       $(".tablepress").wrap('<div class="table-wrap"></div>');
+
+      $(".swipebox-video").swipebox({ autoplayVideos: true, videoMaxWidth : 1140 });
     });
   </script>
 
