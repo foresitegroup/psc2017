@@ -168,6 +168,29 @@ P { margin: 0 0 15px; }
   background: #7791AF;
 }
 
+.header-button.coming-soon { pointer-events: none; position: relative; z-index: 1; }
+
+.header-button.coming-soon:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(119,145,175,0.4);
+}
+
+.header-button.coming-soon:after {
+  content: "COMING SOON";
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-110%);
+  white-space: nowrap;
+}
+
 .one-third, .one-fourth, .one-half {
   display: inline-block;
   margin: 0 5% 0 -4px;
@@ -425,12 +448,13 @@ P { margin: 0 0 15px; }
   border-bottom: 1px solid #14325A;
   font-size: 12px;
   line-height: 1.2em;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 #main-menu UL LI UL LI A {
   color: #555555;
   display: block;
-  width: 100%;
 }
 
 #main-menu UL LI UL LI:hover A {
@@ -522,13 +546,6 @@ P { margin: 0 0 15px; }
 
 .home .one-third LI,
 .home .one-fourth LI { padding: 0.3em 0; }
-
-.home-sidebar {
-  float: right;
-  width: 20%;
-  min-width: 175px;
-  margin-left: 2em;
-}
 
 .contact {
   margin-top: 1em;
@@ -884,8 +901,6 @@ P { margin: 0 0 15px; }
   .home .one-fourth .header-button:link,
   .home .one-fourth .header-button:visited { font-size: 20px; }
 
-  .home-sidebar .header-button:link, .home-sidebar .header-button:visited { font-size: 2.4vw; }
-  
   .tt-left { width: 33%; }
   .tt-right { width: 63%; }
 
@@ -899,6 +914,8 @@ P { margin: 0 0 15px; }
 
   .contact { display: block; width: 100%; }
   .wpcf7 { display: block; width: 100%; margin-left: 0 !important; }
+
+  .header-button.coming-soon { margin-top: 1em; }
 }
 
 @media only screen and (max-width: 600px) {
@@ -925,9 +942,6 @@ P { margin: 0 0 15px; }
 
   .team-left { width: 33%; }
   .team-right { width: 66%; }
-
-  .home-sidebar { float: none; width: 100%; margin: 0 0 3em; }
-  .home-sidebar .header-button:link, .home-sidebar .header-button:visited { font-size: 4vw; }
 }
 
 @media only screen and (max-width: 480px) {
